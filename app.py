@@ -62,8 +62,20 @@ def get_todos(token, page=1):
   data = {}
 
   if candidate:
-    ten_todos = todos.find_one({ user: candidate['login'] }).skip(page * 10 - 10).limit(page * 10)
+    ten_todos = list(todos.find({ "user": candidate['login'] }).skip(page * 10 - 10).limit(page * 10))
     data['todos'] = ten_todos
+
+  return data
+
+@eel.expose
+def add_todo(token, text):
+  candidate = users.find_one({ "token": token })
+  data = {}
+
+  if candidate and len(text) > 3:
+    todos.insert_one({ "user": candidate["login"], "text": text })
+
+    data['success'] = True
 
   return data
 
