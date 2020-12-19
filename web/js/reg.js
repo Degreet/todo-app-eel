@@ -1,9 +1,3 @@
-if (localStorage.rememberLogin)
-  loginInp.value = localStorage.rememberLogin
-
-if (localStorage.rememberPass)
-  passInp.value = localStorage.rememberPass
-
 regBtn.onclick = async () => {
   const login = loginInp.value
   const pass = passInp.value
@@ -26,10 +20,10 @@ regBtn.onclick = async () => {
   const reg = eel.reg_user({ login, pass })
   const data = await reg()
 
-  if (data == "success") {
-    sessionStorage.login = login
+  if (data.success) {
+    sessionStorage.token = data.token
     location.href = "/todos"
   } else {
-    alert(data)
+    alert(data.msg)
   }
 }
