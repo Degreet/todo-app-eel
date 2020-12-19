@@ -20,3 +20,9 @@
 #app .form * {
   margin-bottom: 10px;
 }
+
+.flex-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
