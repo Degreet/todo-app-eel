@@ -7,16 +7,16 @@
   <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
   <link rel="stylesheet" href="css/main.css">
   <script src="eel.js"></script>
-  <script src="js/main.js" defer></script>
+  <script src="js/reg.js" defer></script>
 </head>
 <body>
   <div id="app">
     <div class="form">
       <input class="form-input" type="text" id="loginInp" placeholder="Логин">
-      <input class="form-input mt-3" type="text" id="passInp" placeholder="Пароль">
-      <button class="btn">Зарегистрироваться</button>
+      <input class="form-input mt-3" type="password" id="passInp" placeholder="Пароль">
+      <button class="btn" id="regBtn">Зарегистрироваться</button>
       <label class="form-checkbox form-inline">
-        <input type="checkbox" checked=""><i class="form-icon"></i> Запомнить меня
+        <input type="checkbox" id="rememberMeInp" checked><i class="form-icon"></i> Запомнить меня
       </label>
     </div>
   </div>
