@@ -19,7 +19,7 @@ authBtn.onclick = async () => {
 
   if (data.success) {
     sessionStorage.token = data.token
-    location.href = "/todos"
+    location.href = "todos.html"
   } else {
     alert(data.msg)
   }

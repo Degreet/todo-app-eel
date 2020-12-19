@@ -26,3 +26,24 @@
   align-items: center;
   justify-content: space-between;
 }
+
+#app.todos {
+  padding: 50px 20%;
+  width: unset;
+  height: unset;
+}
+
+#addBtn {
+  width: 64px;
+  height: 64px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+}
